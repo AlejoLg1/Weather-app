@@ -9,6 +9,7 @@ from geopy.geocoders import Nominatim
 from timezonefinder import TimezoneFinder
 from googletrans import Translator
 
+my_key = "0ec2d573463938d3144d8293f6e4021a"
 translator = Translator()
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -35,17 +36,7 @@ def getWeather():
     actual_weather.config(text="CLIMA ACTUAL")
 
     #weather
-    api = "https://api.openweathermap.org/data/2.5/weather?lat="+ str(location.latitude) + "&lon="+ str(location.longitude) +"&appid=646824f2b7b86caffec1d0b16ea77f79"
-    
-    
-    #Api url example
-    #https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid={API key}
-
-    #My api url (Does not work because my key is not confirm)
-    #https://api.openweathermap.org/data/2.5/weather?lat=51.5073359&lon=-0.12765&appid=0ec2d573463938d3144d8293f6e4021a
-
-    #Stranger key
-    #646824f2b7b86caffec1d0b16ea77f79 --> key de persona x
+    api = "https://api.openweathermap.org/data/2.5/weather?lat="+ str(location.latitude) + "&lon="+ str(location.longitude) +"&appid=" + my_key
 
     #api result
     json_data = requests.get(api).json()
@@ -65,8 +56,8 @@ def getWeather():
     climate_preset_text.config(text=(traslated_condition.text))
     climate_preset_text.place(x=108, y=449)
 
-    humidity_preset_text.config(text=humidity)
-    humidity_preset_text.place(x=268.5, y=449)
+    humidity_preset_text.config(text=(humidity, "%"))
+    humidity_preset_text.place(x=248.5, y=449)
 
     rain_preset_text.config(text= "Si" if humidity > 50 else "No")
     rain_preset_text.place(x=500, y=449)
