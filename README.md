@@ -1,46 +1,43 @@
 # Weather App
 
-Este es un proyecto de una aplicación de pronóstico del clima construida en Python utilizando la librería Tkinter para la interfaz gráfica de usuario. La aplicación permite a los usuarios buscar el clima actual de una ciudad específica y proporciona información detallada sobre la temperatura, la condición climática, la humedad, la probabilidad de lluvia y la velocidad del viento.
+This is a project of a weather forecast application built in Python using the Tkinter library for the graphical user interface. The application allows users to check the current weather for a specific city and provides detailed information about temperature, weather condition, humidity, rain probability, and wind speed.
 
-## Requisitos
+## Requirements
 
-Antes de ejecutar la aplicación, asegúrate de tener instaladas las siguientes bibliotecas de Python:
+Before running the application, make sure you have the following Python libraries installed:
 
-- `tkinter`: La biblioteca estándar de Python para crear interfaces gráficas de usuario.
-- `os`: Utilizada para gestionar rutas de archivos y directorios.
-- `datetime`: Para trabajar con fechas y horas.
-- `pytz`: Para manejar zonas horarias.
-- `requests`: Para realizar solicitudes HTTP a una API de pronóstico del clima.
-- `PIL`: La biblioteca Python Imaging Library para trabajar con imágenes.
-- `geopy`: Utilizada para geocodificar la ubicación ingresada por el usuario.
-- `timezonefinder`: Para determinar la zona horaria de la ubicación.
-- `googletrans`: Para traducir las condiciones climáticas del inglés al español.
+- `tkinter`: The Python standard library for creating graphical user interfaces.
+- `os`: Used to manage file and directory paths.
+- `datetime`: For working with dates and times.
+- `pytz`: For handling time zones.
+- `requests`: For making HTTP requests to a weather forecast API.
+- `PIL`: The Python Imaging Library for working with images.
+- `geopy`: Used to geocode the location entered by the user.
+- `timezonefinder`: For determining the time zone of the location.
+- `googletrans`: For translating weather conditions from English to Spanish.
 
-## Uso
+## Usage
 
-1. Ejecuta el archivo Python `weather_app.py`.
-2. La ventana de la aplicación se abrirá, y verás un campo de búsqueda en la parte superior.
-3. Ingresa el nombre de la ciudad para la cual deseas obtener el pronóstico del clima y presiona el botón de búsqueda.
-4. La aplicación mostrará información actualizada sobre el clima en esa ciudad, incluyendo la temperatura, la condición climática, la humedad, la probabilidad de lluvia y la velocidad del viento.
+1. Run the Python file `weather_app.py`.
+2. The application window will open, and you'll see a search field at the top.
+3. Enter the name of the city for which you want to get the weather forecast and press the search button.
+4. The application will display updated information about the weather in that city, including temperature, weather condition, humidity, rain probability, and wind speed.
 
-## Características
+## Features
 
-- **Búsqueda de Ciudades**: Permite a los usuarios ingresar el nombre de la ciudad de su interés.
-- **Zona Horaria Local**: Muestra la hora local de la ciudad seleccionada.
-- **Detalles del Clima**: Proporciona detalles como temperatura, humedad, probabilidad de lluvia y velocidad del viento.
-- **Traducción**: Traduce automáticamente la condición climática del inglés al español.
-- **Interfaz de Usuario Gráfica**: Ofrece una interfaz gráfica fácil de usar.
+- **City Search**: Allows users to enter the name of the city they're interested in.
+- **Local Timezone**: Displays the local time of the selected city.
+- **Weather Details**: Provides details such as temperature, humidity, rain probability, and wind speed.
+- **Translation**: Automatically translates the weather condition from English to Spanish.
+- **Graphical User Interface**: Offers an easy-to-use graphical interface.
 
-## Capturas de Pantalla
+## Screenshots
 
-![Captura de Pantalla 1](screenshots/screenshot1.png)
-![Captura de Pantalla 2](screenshots/screenshot2.png)
+![Screenshot 1](images/screenshot1.png)
+![Screenshot 2](images/screenshot2.png)
 
-## Notas
+## Notes
 
-- Asegúrate de tener una conexión a Internet activa para que la aplicación pueda obtener datos de pronóstico del clima.
-- La información sobre el clima se actualiza en tiempo real.
-- La aplicación está diseñada para funcionar con una clave de API de OpenWeatherMap. Asegúrate de obtener tu propia clave API y reemplazarla en la variable `api` dentro del código.
-- La precisión de los datos del clima depende de la disponibilidad y calidad de los datos proporcionados por la API de OpenWeatherMap.
-
-¡Disfruta de tu experiencia de pronóstico del clima con la Weather App!
+- Ensure you have an active internet connection for the application to fetch weather forecast data.
+- The application is designed to work with an OpenWeatherMap API key. Make sure to obtain your own API key and replace it in the `my_key` variable within the code.
+- The accuracy of weather data depends on the availability and quality of data provided by the OpenWeatherMap API.
