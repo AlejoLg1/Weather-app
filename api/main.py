@@ -9,7 +9,7 @@ from geopy.geocoders import Nominatim
 from timezonefinder import TimezoneFinder
 from googletrans import Translator
 
-my_key = "your_key"
+my_key = "0ec2d573463938d3144d8293f6e4021a"
 translator = Translator()
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -57,13 +57,13 @@ def getWeather():
     climate_preset_text.place(x=108, y=449)
 
     humidity_preset_text.config(text=(humidity, "%"))
-    humidity_preset_text.place(x=248.5, y=449)
+    humidity_preset_text.place(x=300, y=449)
 
     rain_preset_text.config(text= "Si" if humidity > 50 else "No")
-    rain_preset_text.place(x=500, y=449)
+    rain_preset_text.place(x=530, y=449)
 
     wind_preset_text.config(text=wind)
-    wind_preset_text.place(x=715, y=449)
+    wind_preset_text.place(x=710, y=449)
 
 #search box
 search_box_path = os.path.join(parent_dir, "images", "search_box_logo.png")
@@ -106,24 +106,23 @@ weather_data_logo_image = ImageTk.PhotoImage(Image.open(weather_data_logo_path))
 canv.create_image(55, 400, anchor=NW, image=weather_data_logo_image)
 
 climate_label = Label(root, text="CLIMA", font=("Helvetica",15,"bold underline"), fg="white", bg="#1CB7F1")
-climate_label.place(x=110, y=420)
+climate_label.place(x=120, y=420)
 climate_preset_text = Label(text="-",font=("arial", 20, "bold"), fg="#434343", bg="#1CB7F1")
-climate_preset_text.place(x=110, y=449)
+climate_preset_text.place(x=120, y=449)
 
 humidity_label = Label(root, text="HUMEDAD", font=("Helvetica",15,"bold underline"), fg="white", bg="#1CB7F1")
-humidity_label.place(x=230, y=420)
+humidity_label.place(x=280, y=420)
 humidity_preset_text = Label(text="-",font=("arial", 20, "bold"), fg="#434343", bg="#1CB7F1")
-humidity_preset_text.place(x=230, y=449)
+humidity_preset_text.place(x=280, y=449)
 
-rain_label = Label(root, text="PROBABILIDAD DE LLUVIA", font=("Helvetica",15,"bold underline"), fg="white", bg="#1CB7F1")
-rain_label.place(x=390, y=420)
+rain_label = Label(root, text="¿LLOVERÁ?", font=("Helvetica",15,"bold underline"), fg="white", bg="#1CB7F1")
+rain_label.place(x=480, y=420)
 rain_preset_text = Label(text="-",font=("arial", 20, "bold"), fg="#434343", bg="#1CB7F1")
-rain_preset_text.place(x=390, y=449)
+rain_preset_text.place(x=480, y=449)
 
 wind_label = Label(root, text="VIENTO", font=("Helvetica",15,"bold underline"), fg="white", bg="#1CB7F1")
-wind_label.place(x=710, y=420)
+wind_label.place(x=700, y=420)
 wind_preset_text = Label(text="-",font=("arial", 20, "bold"), fg="#434343", bg="#1CB7F1")
-wind_preset_text.place(x=710, y=449)
+wind_preset_text.place(x=700, y=449)
 
 root.mainloop()
-
