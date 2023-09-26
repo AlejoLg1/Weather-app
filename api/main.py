@@ -9,7 +9,7 @@ from geopy.geocoders import Nominatim
 from timezonefinder import TimezoneFinder
 from googletrans import Translator
 
-my_key = "0ec2d573463938d3144d8293f6e4021a"
+my_key = "your_key"
 translator = Translator()
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
